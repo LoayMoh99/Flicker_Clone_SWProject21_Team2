@@ -1,0 +1,6 @@
+[submodule "flickr_frontend"]
+	path = flickr_frontend
+	url = https://github.com/farahmostafa11/flickr_frontend.git
+[submodule "Team2_backend"]
+	path = Team2_backend
+	url = https://github.com/3bdelrahman-amr/Team2_backend.git
