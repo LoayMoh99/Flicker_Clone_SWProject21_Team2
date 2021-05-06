@@ -1,0 +1,8 @@
+  
+{
+    "JWT_KEY": "DROPOIDSECRETKEY##",
+    "JWT_EXPIRES_IN": "2h",
+    "db": "mongodb://localhost:27017/dropoid",
+    "PORT": "3000",
+    "NODE_ENV": "production"
+  }
