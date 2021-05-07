@@ -1,0 +1,211 @@
+.EditInfo-body{
+
+    background: #f3f5f6;
+    padding: 10px 150px 10px 150px;
+    margin-top: 60px;
+
+}
+
+#nav-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+
+#nav-item {
+    float: left;
+}
+
+#a {
+    display: block;
+    color: #212124;
+    text-align: right;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+#a:hover, #a:active {
+    color: #212124;
+    text-decoration: none;
+  }
+
+
+#a2{
+    color:#006dac;
+}
+
+#right{
+    float: right;
+}
+
+/* cards */
+.card-grid {
+    display: flex;
+    flex-wrap: wrap; 
+    --height: 402px;  /* Minimal row height */
+    --ratio: 1; /* Default aspect ratio for photos that are not loaded yet */
+    padding-top: 10px;
+  }
+
+.card {
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.2);
+    /* transition: 0.3s; */
+    width: 300px;
+    height: 402px;
+    margin: 2px;
+    position: relative;
+    z-index: 0;
+  }
+
+.card-grid img {
+    position: relative;
+    width: 100%;
+    /* height: calc(100% - 90px); */
+    height:312px;
+    max-height: 312px;
+    min-height: 312px;
+    z-index: auto;
+    padding-bottom: 3px;
+    cursor: pointer;
+}
+  
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    position: relative;
+    z-index: auto;
+}
+  
+.interaction-bar {
+    position: relative;
+    padding: 8px 8px;
+    width: 100%;
+    height: 90px;
+    max-height: 90px;
+    z-index: auto;
+}
+
+.title-bar{
+    border: 0;
+    height: 46px;
+    cursor: pointer;
+
+}
+
+.title-bar:hover {
+    background-color: rgba(0,0,0,0.1);
+    position: relative;
+    z-index: auto;
+}
+
+.card-grid h1{
+    margin-bottom:0;
+    color: #212124;
+    font-size: 16px;
+}
+
+.card-grid p{
+    margin : 0; 
+    padding-top:5px;
+    line-height : 15px;
+    font-size: 14px;
+    color:darkgrey;
+}
+
+/* delete button */
+.button{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 34px;
+    height: 39px;
+    padding: 0;
+    min-width: auto;
+    background-color: transparent;
+    color:white;
+    opacity: 1;
+    border: none;
+    cursor: pointer;
+    z-index: auto;
+    display: none;
+}
+
+img:hover + .button , .button:hover {
+    display: inline-block;
+}
+
+/* tools */
+.tools{
+    border: 0;
+    /* height: 55px; */
+    padding-left: 10px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: auto;
+    list-style-type: none;
+    color:darkgrey;
+}
+
+.bttn{
+    top: 0;
+    bottom: 5px;
+    left: 5px;
+    right:5px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+#pivacy{
+    float: left;
+}
+
+#info li {
+    float: right;
+    margin:4px;
+}
+
+/* Editing field */
+.new-interaction-bar {
+    position: absolute;
+    padding:0;
+    top:200px;
+    width: 100%;
+    height: 200px;
+    max-height: 200px;
+    min-height: 200px;
+    overflow-x: hidden;
+    transition: 0.3s;
+    z-index: auto;
+    background-color: #fff;
+}
+
+.new-interaction-bar button{
+    height: 29px;
+    min-width: 80px;
+    font-size: 14px;
+    background: #1c9be9;
+    color: #fff;
+    border-color: transparent;
+    font-weight: 600;
+    float: right;
+    border-radius: 3px;
+    border: none;
+    margin-right: 10px;
+    transition: background .15s ease-in-out;
+}
+
+#input-format input{
+    margin: 10px;
+    width:95%;
+    font-size: 16px;
+    color: #212124;
+}
+
+#input-format textarea{
+    margin: 10px;
+    width:95%;
+    font-size: 14px;
+    color:darkgrey;
+}

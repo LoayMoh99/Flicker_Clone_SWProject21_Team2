@@ -1,0 +1,8 @@
+To start the server: 
+1. open new terminal
+2. npx json-server --watch src/db/db.json  --port 3001 
+
+To start react App:
+1.open new terminal 
+2. npm start
+

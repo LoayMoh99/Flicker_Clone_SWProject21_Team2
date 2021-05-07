@@ -1,0 +1,9 @@
+.sidenavbar {
+  display: flex;
+  width: 42%;
+  flex-direction: column;
+}
+
+.sidenavbar a {
+  display: inline-block;
+}

@@ -1,0 +1,340 @@
+/* start variables */
+@import url("https://fonts.gstatic.com");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap");
+/* start variables */
+:root {
+  --navbar-color: #212124;
+  --white: #fff;
+  --logo-pink-circle: #ff0084;
+  --logo-blue-circle: #0063DC;
+  --border-color: #898989;
+  --signup-button-color: #128fdc;
+  --agreement-part-color: #898989;
+  --seperator-line-color: #e3e3e3;
+}
+/* End variables */
+/* Start global rules */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+.container {
+  padding: 0px 40px;
+  margin: 0px auto;
+}
+/* Small */
+@media (min-width: 768px) {
+  .container {
+      width: 600px;
+  }
+}
+/* medium */
+@media (min-width: 992px) {
+  .container {
+      width: 800px;
+  }
+}
+/* large */
+@media (min-width: 1199px) {
+  .container {
+      width: 960px;
+  }
+}
+/* End global rules */
+/* Start Header */
+.header {
+  background-color: var(--navbar-color,red);
+  height: 48px;
+}
+.header .container {
+  height: 48px;
+  display: flex;
+  align-items: center;
+}
+.header .container p {
+  position: relative;
+  color: var(--white,red);
+  /* font-size: 40px; */
+  margin: 0;
+  font-size: 25px;
+  font-weight: 700;
+}
+.header .container p::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--logo-pink-circle,red);
+  left: -10px;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.header .container p::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--logo-blue-circle,red);
+  left: -22px;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+/* End Header */
+/*Start Signup Form*/
+.card-container {
+  background-image: url("../../img/dBackground.jpg");
+  min-height: calc(110vh - 48px);
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+}
+
+.content-container {
+  width: 353px;
+  /* width: 100%; */
+  height: 688.6px;
+  background-color: var(--white,red);
+  padding: 24px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+/*check this part*/
+@media (max-width: 575px){
+  .content-container {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+  .card-container {
+      background-image: none;
+  }
+}
+/*check this part*/
+.content-container .logo {
+  display: flex;
+  justify-content: center;
+  margin: 0 0 8px 0;
+}
+.content-container .logo span {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-left: 3px;
+}
+.content-container .logo .blue-circle {
+  background-color: var(--logo-blue-circle);
+  border-radius: 50%;
+}
+.content-container .logo .Pink-circle {
+  background-color: var(--logo-pink-circle);
+  border-radius: 50%;
+}
+.content-container h6 {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 400;
+  margin: 0px 0px 16px 0px;
+}
+form .box-one {
+  width: 304px;
+  height: 56px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  position: relative;
+  margin-bottom: 10px;
+}
+form .box-one input {
+  width: 302px;
+  padding: 7px;
+  position: absolute;
+  bottom: 2px;
+  left: 0;
+  border-color: transparent;
+  background-color: transparent;
+}
+form .box-one input:focus {
+  outline: none;
+}
+form .box-one input:focus +label {
+  color: blue;
+  font-size: 11px;
+  margin-top: -1px;
+}
+form .box-one:focus-within {
+  border-color: blue;
+  /* background-color: blue;
+  opacity: 0.5; */
+}
+form .box-one input::placeholder {
+  font-size: 10px;
+  opacity: 0.5;
+}
+form .box-one input #yourage {
+  width: 100%;
+}
+form .box-one label {
+  font-size: 16px;
+  position: absolute;
+  padding-left: 9px;
+  top: 9px;
+  z-index: 1;
+  transition: 0.3s;
+}
+form .box-one .eye-box {
+  width: 40px;
+  height: 100%;
+  float: right;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+form .box-one #password {
+  width: calc(302px - 40px);
+}
+form .signup-button button {
+  width: 304px;
+  height: 40px;
+  background-color: var(--signup-button-color,red);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  font-size: 16px;
+  margin: 32px 0px 0px;
+  border: none;
+  color: var(--white,red);
+  font-weight: 600;
+}
+form .signup-button p {
+  color: var(--white,red);
+  font-weight: 500;
+}
+@media (max-width: 575px) {
+  form {
+      width: 100%;
+      z-index: 2;
+  }
+  form .box-one {
+      width: 100%;
+  }
+  form .signup-button button {
+      width: 100%;
+  }
+  footer {
+      padding: 0 30px;
+  }
+  .HPT-links a {
+      color: var(--navbar-color,red) !important;
+  }
+  .select-Lang .custom-arrow .dashone {
+      background-color: var(black,red) !important;
+  }
+  .select-Lang .custom-arrow .dashtwo {
+    background-color: var(black,red) !important;
+  }
+  .select-Lang select {
+      color: var(--navbar-color,red) !important;
+  }
+}
+.content-container .data .agreement-part {
+  text-align: center;
+  color: var(--agreement-part-color,red);
+  font-size: 12px;
+  padding: 0px 20px;
+}
+.content-container .data .agreement-part a {
+  text-decoration: none;
+}
+.content-container .data .agreement-part a:visited {
+  color: blue;
+}
+.content-container .data .seperator-line hr{
+  color: var(--seperator-line-color);
+  height: 1px;
+}
+.content-container .data .check-member {
+  text-align: center;
+  font-size: 14px;
+  margin: 16px 0px;
+}
+.content-container .data .check-member a {
+  text-decoration: none;
+}
+.content-container .data .check-member a:visited {
+  color: blue;
+}
+footer {
+  display: flex !important;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.select-Lang select {
+  margin: 10px 10px 10px 0;
+  padding-left: 0px;
+  width: 135px;
+  background-color: transparent;
+  color: white;
+  font-weight: 400;
+  border-color: transparent;
+  appearance: none;
+  cursor: pointer;
+}
+.select-Lang select option {
+  color: var(--navbar-color,red)
+}
+.select-Lang select:focus {
+  border: none;
+  outline: none;
+}
+.select-Lang {
+  position: relative;
+}
+.select-Lang .custom-arrow {
+  display: block;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  left: 60%;
+  top: 30%;
+  pointer-events: none;
+}
+.select-Lang .custom-arrow i {
+  color: white;
+  font-size: 15px;
+}
+.select-Lang .custom-arrow  .dashone {
+  width: 2px;
+  height: 10px;
+  background-color: var(--white,red);
+  transform: rotate(-45deg);
+  margin-top: 5px;
+  border-radius: 4px;
+}
+.select-Lang .custom-arrow  .dashtwo {
+  width: 2px;
+  height: 10px;
+  background-color: var(--white,red);
+  transform: rotate(45deg);
+  margin-top: -10px;
+  margin-left: 6px;
+  border-radius: 4px;
+}
+.HPT-links a {
+  color: var(--white,red);
+  font-size: 16px;
+  text-decoration: none;
+}
+.HPT-links a:not(:first-child) {
+  margin-left: 10px;
+}
+/*Start Signup Form*/
+

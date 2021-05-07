@@ -1,0 +1,68 @@
+.flwAndFlowing{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
+    padding: 50px 0;
+}
+
+.flwAndFlowing .picAndSelect{
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.flwAndFlowing .picAndSelect .imgg{
+    height: auto;
+    width: 66px;
+    background-image: url(../../img/deefault.jpg);
+    background-size: cover;
+}
+
+.flwAndFlowing .picAndSelect .listAndTitle{
+    margin-left: 10px;
+}
+
+.flwAndFlowing .picAndSelect ul{
+    padding: 0;
+    display: flex;
+    margin: 0;
+}
+
+.flwAndFlowing .picAndSelect ul li{
+    margin-left: 20px;
+}
+.flwAndFlowing .picAndSelect ul li:first-child{
+    margin: 0 !important;
+}
+
+.flwAndFlowing .searchFeatures{
+    display: flex;
+    height: 30px;
+    align-items: baseline;
+    margin: 20px 0;
+}
+
+.flwAndFlowing .searchFeatures #searchForm{
+    height: 24px;
+    width: 270px;
+}
+
+.flwAndFlowing .searchFeatures p{
+    margin: 0 20px;
+}
+
+.flwAndFlowing .searchFeatures a{
+    text-decoration: underline !important;
+}
+
+.flwAndFlowing .searchFeatures span{
+    margin-right: 10px;
+}
+
+.flwAndFlowing .table img{
+    width: 30px;
+    height: auto;
+}

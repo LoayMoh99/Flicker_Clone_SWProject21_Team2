@@ -1,0 +1,35 @@
+.images_modal {
+  display: inline;
+  margin: 0px;
+  padding: 0px;
+}
+
+#content_modal {
+  display: block;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  /* white-space: nowrap; */
+  /* top: 50px; */
+  height: 60px;
+  max-width: 60px;
+  width: 100%;
+  overflow-y: hidden;
+  overflow-x: auto;
+}
+.column_adj_modal {
+  float: left;
+  width: 5%;
+  padding: 3px;
+}
+
+/* Clearfix (clear floats) */
+.row_adj_modal::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.pad_row_modal {
+  padding: 10px 150px 10px 150px;
+}

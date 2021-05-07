@@ -1,0 +1,151 @@
+/*.navbar
+{
+    height: 60px;
+    width:100%;
+    background-color: black;
+    opacity: .75;
+    top:0;
+    left: 0;
+    right: 0;
+    position: fixed;
+}*/
+.nav-bar
+{
+    height: 50px;
+    width:100%;
+    background-color: white;
+  
+    left: 0;
+    right: 0;
+    top: 60px;
+    border-bottom: 1px solid hsla(0, 0%, 54%, .3);
+    position: fixed !important;
+}
+
+.sub-navbar
+{
+    position: absolute;
+    background-color: white;
+    height: 50px;
+    width: 70%;
+    margin-left: 100px;
+}
+.explore 
+{
+    position: absolute;
+    list-style: none;
+   height: 65%;
+   font-size: 1em;
+   border-bottom: 3px solid transparent;
+   display: inline-block;
+   left:80px;
+   top:15px;
+   padding:0 15px 0 15px;
+   opacity: .75;
+  
+}
+.explore a{
+    color: black !important ;
+}
+.trending
+{
+    position: absolute;
+    list-style: none;
+   height: 65%;
+   font-size: 1em;
+   border-bottom: 3px solid transparent;
+   display: inline-block;
+   left:180px;
+   top:15px;
+   padding:0 15px 0 15px;
+   opacity: .75;
+
+}
+.trending a{
+    color: black !important ;
+}
+
+a:hover
+{
+    opacity: 1;;
+ 
+    
+}
+.explore:hover
+{
+   
+    opacity: 1;
+    border-bottom: 3px solid var(--edidHoverBlue);
+    
+}
+.explore:active
+{
+   
+    opacity: 1;
+    border-bottom: 3px solid var(--edidHoverBlue);
+    
+}
+
+.trending:hover
+{
+    opacity: 1;
+    border-bottom: 3px solid var(--edidHoverBlue);
+}
+
+a{
+    text-decoration: none;
+    
+    box-sizing: border-box;
+}
+.nav 
+{
+  margin: 0;  
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  box-sizing: border-box;
+}
+#middle
+{   
+    position: absolute;
+    height: 100%;
+    background-color: #f3f5f6;
+    top: 200px;
+    padding-left: 100px;
+    width: 100%;
+}
+
+.upper-middle
+{
+    position: absolute;
+    top: 110px;
+    height: 80px;
+    padding-bottom: 50px;
+    width: 100%;
+    background-color: #f3f5f6;
+}
+
+.Explore-par
+{
+    position: absolute;
+    left:180px;
+    padding-top: 30px;
+    padding-bottom: 50px;
+    font-size: 24px;
+    color:#212124;
+    font-weight: 300;
+
+  
+    
+}
+.Trending-par
+{
+    position: absolute;
+    left:180px;
+    padding-top: 30px;
+    padding-bottom: 50px;
+    font-size: 24px;
+    color:#212124;
+    font-weight: 300;
+}
+

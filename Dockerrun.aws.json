@@ -1,0 +1,33 @@
+{
+    "AWSEBDockerrunVersion": 2,
+    "containerDefinitions": [
+      {
+        "name": "nginx",
+        "image": "loaymoh99/dkr-dropoids-nginx",
+        "hostname": "nginx",
+        "essential": true,
+        "portMappings": [
+          {
+            "hostPort": 80,
+            "containerPort": 80
+          }
+        ],
+        "links": ["front", "api"],
+        "memory": 100
+      },
+      {
+        "name": "client",
+        "image": "loaymoh99/dkr-dropoids-front",
+        "hostname": "front",
+        "essential": false,
+        "memory": 200
+      },
+      {
+        "name": "api",
+        "image": "loaymoh99/dkr-dropoids-api",
+        "hostname": "api",
+        "essential": false,
+        "memory": 200
+      }
+    ]
+}

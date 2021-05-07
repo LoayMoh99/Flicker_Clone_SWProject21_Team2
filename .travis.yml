@@ -1,0 +1,44 @@
+sudo: required
+language: generic
+
+services:
+  - docker
+
+before_install:
+  # Build Docker image for testing:
+  - echo Build front and api docker images for testing..
+  - docker build -t loaymoh99/react-test -f ./front/Dockerfile.dev ./front
+  - docker build -t loaymoh99/nodejs-test -f ./api/Dockerfile.dev ./api
+
+script:
+  # Run tests with built Docker images:
+  - echo Run react tests..
+  - docker run -e CI=true loaymoh99/react-test
+  - echo Run nodejs tests...
+  - docker run -e CI=true loaymoh99/nodejs-test
+
+after_success:
+  - echo Building the production Docker image..
+  - docker build -t loaymoh99/dkr-dropoids-front ./front
+  - docker build -t loaymoh99/dkr-dropoids-nginx ./nginx
+  - docker build -t loaymoh99/dkr-dropoids-api ./api
+  # Log in to the docker CLI:
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+  # Take those images and push them to docker hubgit push -u origin main:
+  - echo Pushing the Docker images..
+  - docker push loaymoh99/dkr-dropoids-front
+  - docker push loaymoh99/dkr-dropoids-nginx
+  - docker push loaymoh99/dkr-dropoids-api
+  
+deploy:
+  edge: true
+  provider: elasticbeanstalk
+  region: us-east-2
+  app: dropoidss_dropoids
+  env: dropoidssdropoids-env
+  bucket_name: elasticbeanstalk-us-east-2-708087603038
+  bucket_path: dropoidss_dropoids
+  on:
+    branch: main
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY

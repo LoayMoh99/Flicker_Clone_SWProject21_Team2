@@ -1,0 +1,8 @@
+FROM node:12.13.0-alpine as build 
+WORKDIR /app
+COPY package*.json ./
+RUN npm install 
+COPY . .
+EXPOSE 3001
+CMD npx json-server ./src/db/db.json  --port 3001 
+

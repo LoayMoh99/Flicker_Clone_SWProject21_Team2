@@ -17,6 +17,11 @@ app.use(mongoSanitize())
 app.use(cors())
 app.options('*', cors())
 
+// simple route
+app.get("/test", (req, res) => {
+    res.json({ message: "Welcome to dropoids application." });
+  });
+  
 // v1 api routes
 app.use('/api/v1',routes);
 // app.listen(3000,(err)=>{
