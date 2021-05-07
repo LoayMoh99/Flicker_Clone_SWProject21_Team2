@@ -1,0 +1,227 @@
+.pink
+{color:#ff0084;}
+.grey{color:#999;}
+#main{
+    display: flex;
+    justify-content: flex-start;
+    text-align: left;
+    width:75%;
+    margin: 5px auto 50px;
+    margin-top: 60px;
+}
+#main::after,#about-main::after{
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden; 
+}
+#about-sidebar{
+    /* float: left; */
+    width: 25%;
+    max-height: 600px;
+    margin-top: 14px;
+    padding-right: 20px;
+    border-right: 1px solid #dbdbdb;
+}
+#about-sidebar ul {
+    margin: 4px 0 25px;
+    padding-left: 0;
+}
+#about-sidebar ul li {
+    font-size: 15.18px;
+    line-height: 30.35px;
+    padding: 3px 0;
+    border-bottom: 1px solid #dbdbdb;
+    list-style: none;
+}
+#log-sign a img{
+    width: 100%;
+}
+#about-sidebar ul li a,#log-sign a,#sub-nav a,#about-main a{
+    text-decoration: none;
+    color: #0063dc;
+}
+#about-sidebar ul li :hover,#log-sign a:hover,#sub-nav a:hover,#about-main a:hover{
+    
+    background-color: #0063dc;
+    color: white;
+}
+#log-sign{
+    margin: 28px 0 26px;
+    text-align: center;
+}
+#sub-nav{
+    margin-bottom: 26px;
+    font-size: 14px;
+    line-height: 22px;
+}
+#about-main{
+    width: 58%;
+    margin-left: 60px;
+}
+#about-main h1{
+    margin: 0 0 16px;
+    line-height: 29px;
+    font-size: 26px;
+    font-weight: bold;
+    padding-top: 25px;
+}
+#about-main h2 {
+    margin: 16px 0 10px;
+    font-size: 22px;
+    width: 100%;
+    line-height: 30px;
+}
+#about-main blockquote h6{
+    line-height: 24px;
+    font-size: 18px;
+    color: #000;
+}
+#about-main blockquote{
+    margin: 16px 40px;
+     width: 80%; 
+}
+#about-main blockquote p,#about-main p{
+    margin: 12px 0;
+  font-size: 13px;
+}
+.team-flex{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.mem-flex{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width:16%;
+}
+.mem-flex a img{
+    width: 100%;
+}
+@media(max-width:992px){
+    #main{
+        width: 80%;
+        margin: 5px 20px 50px;
+    }
+    #about-main{
+        width: 85%;
+    }
+    #about-main h2{
+        font-size: 18px;
+        line-height: 22px;
+    }
+    #about-main blockquote h6{
+        font-size: 16px;
+    }
+    #about-main blockquote p,#about-main p{
+        font-size: 10px;
+    }
+}
+@media(max-width:768px){
+    #about-sidebar ul li {
+        font-size: 10.18px;
+    line-height: 18.35px;
+    }
+    #sub-nav {
+        font-size: 9px;
+        line-height: 12px;}
+    #about-main h1{
+        font-size: 18px;
+    }
+    #about-main h2{
+        font-size: 16px;
+        line-height: 20px;
+    }
+    #about-main blockquote h6,#about-sidebar h6{
+        font-size: 12px;
+    }
+    #about-main blockquote p,#about-main p{
+    font-size: 9px;
+    line-height: 12px;
+    }
+}
+@media(max-width:576px){
+    #about-sidebar ul li {
+        font-size: 8.18px;
+    line-height: 16.35px;
+    }
+    
+    #about-sidebar{
+        width: 30%;
+        max-height: 450px;;
+    }
+    
+    #about-main{
+        width: 90%;
+        margin-left: 30px;
+    }
+    #sub-nav {
+        margin-bottom: 24px;
+        font-size: 7px;
+        line-height: 10px;}
+    #about-main h1{
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+    #about-main h2{
+        font-size: 12px;
+        line-height: 14px;
+        margin: 0px 5px;
+
+    }
+    #about-main blockquote{
+        width:90%;
+    }
+    #about-main blockquote h6,#about-sidebar h6{
+        font-size: 10px;
+        line-height: 12px;
+    }
+    #about-main blockquote p,#about-main p{
+    font-size: 7px;
+    line-height: 10px;
+    }
+}
+@media(max-width:320px){
+    #about-sidebar ul li {
+        font-size: 4.18px;
+    line-height: 9.35px;
+    }
+    
+    #about-sidebar{
+        width: 35%;
+        max-height: 450px;;
+    }
+    
+    #about-main{
+        width: 90%;
+        margin-left: 20px;
+    }
+    #sub-nav {
+        margin-bottom: 20px;
+        font-size: 5px;
+        line-height: 5px;}
+    #about-main h1{
+        font-size: 14px;
+        margin-bottom: 3px;
+    }
+    #about-main h2{
+        font-size: 10px;
+        line-height: 11px;
+        margin: 0px 3px;
+
+    }
+    #about-main blockquote{
+        width:90%;
+        margin-left: 15px;
+    }
+    #about-main blockquote h6,#about-sidebar h6{
+        font-size: 8px;
+        line-height: 8px;
+    }
+    #about-main blockquote p,#about-main p,#log-sign {
+    font-size: 7px;
+    line-height: 9px;
+    }
+}

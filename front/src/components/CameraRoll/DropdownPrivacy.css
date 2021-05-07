@@ -1,0 +1,32 @@
+option {
+  text-align: left;
+  padding: 0.5em 10em;
+  color: #778b97;
+  font-size: 14px;
+  margin: 5px;
+  border-radius: 0.5mm;
+  min-width: 100px;
+  white-space: nowrap;
+  cursor: default;
+}
+select {
+  max-width: 205px;
+  display: inline-block;
+  vertical-align: baseline;
+  margin: 5px;
+  font: bold;
+  font-weight: 1200;
+  color: #006dac;
+  border-style: none;
+  font-size: 14px;
+  padding-left: 10px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; /* Remove default arrow */
+  background-image: url(https://combo.staticflickr.com/ap/build/images/sprites/icons-32dc0fa1.png)
+    5px 9px; /* Add custom arrow*/
+}
+.styled {
+  margin-top: 5px;
+  height: 3px;
+}

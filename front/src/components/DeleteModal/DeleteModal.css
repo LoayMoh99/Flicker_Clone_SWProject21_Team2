@@ -1,0 +1,100 @@
+/* Modal */
+
+main {
+  background: #fff;
+  margin: 0 auto;
+  max-width: 680px;
+  padding: 50px 30px;
+}
+
+.modal__backdrop {
+  background: rgba(255, 254, 254, 0.705);
+  bottom: 0;
+  left: 0;
+  overflow: auto;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 6;
+}
+
+.modal__container {
+  background: #fff;
+  border-radius: 5px;
+  max-width: 1496px;
+  max-height: 190px;
+  height: 190px;
+  margin: 250px auto;
+  padding: 15px;
+  width: 560px;
+  border-radius: 3px;
+  box-shadow: 0 1px 6px rgb(0 0 0 / 20%);
+  box-sizing: border-box;
+}
+
+.modal__title {
+  font-size: 18px;
+  padding: 19px 20px 16px;
+  line-height: 18px;
+}
+
+.modal__container p {
+  padding: 20px;
+  min-height: 60px;
+  overflow-y: auto;
+  padding-top: 0;
+  font-size: 14px;
+}
+
+#cancel {
+  height: 29px;
+  line-height: 29px;
+  min-width: 80px;
+  font-size: 14px;
+  background-color: #979ea2;
+  color: #fff;
+  box-sizing: border-box;
+  display: inline-block;
+  border-radius: 3px;
+  border: none;
+  cursor: pointer;
+  margin-left: 10px;
+  padding: 0 20px;
+  position: relative;
+}
+
+#confirm {
+  height: 29px;
+  line-height: 29px;
+  min-width: 80px;
+  font-size: 14px;
+  background-color: #c82426;
+  color: #fff;
+  box-sizing: border-box;
+  display: inline-block;
+  border-radius: 3px;
+  border: none;
+  cursor: pointer;
+  margin-left: 10px;
+  padding: 0 20px;
+  position: relative;
+}
+
+.modal__container button {
+  float: right;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}

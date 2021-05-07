@@ -9,12 +9,13 @@ const specs = swaggerJsdoc({
         info: {
             title: 'Dropoid API specification',
             version: '1.0.0',
-            host: 'localhost:8080',
+            host: 'localhost:81',
             basePath: '/api/v1',
         },
     },
     apis: ['src/routes/v1/*.js'],
 })
+  
 
 router.use('/', swaggerUi.serve)
 router.route('/').get(

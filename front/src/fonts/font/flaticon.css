@@ -1,0 +1,47 @@
+@font-face {
+    font-family: "flaticon";
+    src: url("./flaticon.ttf?6599ec8f773874c96b355c82c5f0487f") format("truetype"),
+url("./flaticon.woff?6599ec8f773874c96b355c82c5f0487f") format("woff"),
+url("./flaticon.woff2?6599ec8f773874c96b355c82c5f0487f") format("woff2"),
+url("./flaticon.eot?6599ec8f773874c96b355c82c5f0487f#iefix") format("embedded-opentype"),
+url("./flaticon.svg?6599ec8f773874c96b355c82c5f0487f#flaticon") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.flaticon-cloud-computing:before {
+    content: "\f101";
+}
+.flaticon-bell:before {
+    content: "\f102";
+}
+.flaticon-search:before {
+    content: "\f103";
+}
+.flaticon-menu:before {
+    content: "\f104";
+}
+.flaticon-close:before {
+    content: "\f105";
+}
+.flaticon-edit:before {
+    content: "\f106";
+}
+.flaticon-facebook:before {
+    content: "\f107";
+}
+.flaticon-twitter:before {
+    content: "\f108";
+}
+.flaticon-instagram:before {
+    content: "\f109";
+}

@@ -1,0 +1,31 @@
+.list-label {
+  padding: 0 20px 0 0;
+  font-weight: 600;
+}
+.space-add {
+  padding-left: 40px;
+}
+.stuff-selection-view
+  .stuff-selection
+  .stuff-selection-search-container
+  input.stuff-selection-search {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 auto;
+  border-style: none;
+  border: none;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  padding: 8px 0;
+  box-shadow: none;
+  padding-top: 4px;
+  border: 0;
+  text-indent: 12px;
+  margin: 0 0 0 8px;
+  box-shadow: none !important;
+  outline: none;
+  font-size: 14px;
+}
+
+.add-footer {
+  padding-top: 50px;
+}

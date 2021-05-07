@@ -1,0 +1,61 @@
+$flaticon-font: "flaticon";
+
+@font-face {
+    font-family: $flaticon-font;
+    src: url("./flaticon.ttf?6599ec8f773874c96b355c82c5f0487f") format("truetype"),
+url("./flaticon.woff?6599ec8f773874c96b355c82c5f0487f") format("woff"),
+url("./flaticon.woff2?6599ec8f773874c96b355c82c5f0487f") format("woff2"),
+url("./flaticon.eot?6599ec8f773874c96b355c82c5f0487f#iefix") format("embedded-opentype"),
+url("./flaticon.svg?6599ec8f773874c96b355c82c5f0487f#flaticon") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+$flaticon-map: (
+    "cloud-computing": "\f101",
+    "bell": "\f102",
+    "search": "\f103",
+    "menu": "\f104",
+    "close": "\f105",
+    "edit": "\f106",
+    "facebook": "\f107",
+    "twitter": "\f108",
+    "instagram": "\f109",
+);
+
+.flaticon-cloud-computing:before {
+    content: map-get($flaticon-map, "cloud-computing");
+}
+.flaticon-bell:before {
+    content: map-get($flaticon-map, "bell");
+}
+.flaticon-search:before {
+    content: map-get($flaticon-map, "search");
+}
+.flaticon-menu:before {
+    content: map-get($flaticon-map, "menu");
+}
+.flaticon-close:before {
+    content: map-get($flaticon-map, "close");
+}
+.flaticon-edit:before {
+    content: map-get($flaticon-map, "edit");
+}
+.flaticon-facebook:before {
+    content: map-get($flaticon-map, "facebook");
+}
+.flaticon-twitter:before {
+    content: map-get($flaticon-map, "twitter");
+}
+.flaticon-instagram:before {
+    content: map-get($flaticon-map, "instagram");
+}

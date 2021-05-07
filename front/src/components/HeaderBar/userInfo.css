@@ -1,0 +1,279 @@
+@import "../navbar/constants.css";
+/*@import "../navbar/mainNav.css";*/
+
+.uName{
+    margin-top: 60px;
+    height: 250px;
+    width: 100%;
+    position: relative;
+    /* background-image: url(../../img/ddBackground.jpg); */
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+.uName .overlay1{
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg,rgba(255,255,255,0.25), rgba(0,0,0,0.75));
+}
+
+.uName .overlay1:hover i{
+    right: 186px;
+    opacity: 1;
+}
+
+.uName .overlay1{
+    text-align: end;
+}
+
+.uName .overlay1 i{
+    font-size: 20px;
+    color: white;
+    position: absolute;
+    top: 39px;
+    /*right: -37px;*/
+    right: 170px;
+    opacity: 0;
+    transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -ms-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+}
+
+.uName .overlay1 .userInfo{
+    color: white !important;
+    display: flex;
+    justify-content: space-evenly;
+    width: 85%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,0%);
+    position: absolute;
+}
+
+.uName .overlay1 .userInfo .profImg{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+.uName .overlay1 .userInfo .nameAndInfo{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 87%;
+    justify-content: flex-end;
+    font-weight: 300 !important;
+}
+
+.uName .overlay1 .userInfo .nameAndInfo .numbers {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.uName .overlay1 .userInfo .nameAndInfo .numbers ul{
+    display: flex;
+    width: fit-content;
+
+}
+
+.uName .overlay1 .userInfo .nameAndInfo .numbers ul li:last-child{
+    margin-left: 30px;
+}
+
+.uName .overlay1 .userInfo .nameAndInfo .numbers .follwingFollowers{
+    width: 50%;
+    display: flex;
+}
+
+.uName .overlay1 .userInfo .nameAndInfo .numbers .joined{
+    width: 29%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.modal-container {
+    position: fixed;
+    z-index: 999999999;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+.modal-container .overlay2 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.modal-container .modal-body {
+    position: absolute;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 90vh;
+    width: 85%;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 0px 13px 3px var(--modalGray);
+    box-shadow: 0px 0px 13px 3px var(--modalGray);
+    text-align: center;
+    padding: 20px 0;
+}
+
+.navAndSearch {
+    border-bottom: 1px solid var(--modalGray);
+    display: flex;
+    align-items: center;
+    padding: 0 20px 0 10px;
+    justify-content: space-between;
+}
+
+.navAndSearch .searchAndClose{
+    display: flex;
+    align-items: center;
+}
+
+.modal-container .modal-body .navAndSearch .searchBox2{
+    border: 1px solid var(--modalGray);
+    border-radius: 5px;
+    margin-right: 20px;
+}
+
+.searchBox2{
+    display: flex;
+    /*margin-left: 15px;
+    text-align: start;*/
+}
+
+.searchBox2 input{
+    font-size: 14px;
+    width: 180px;
+    border-radius: 0px 0.25rem 0.25rem 0px  !important;
+    border: none;
+    padding: 5px;
+}
+.searchBox2 .searchBtn{
+    background-color: white;
+    border-style: inset;
+    border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+    border-width: 2px !important;
+    height: auto;
+    border: none;
+    border-radius: 0.25rem 0px 0px 0.25rem  !important;
+}
+
+
+.navAndSearch .editNav{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+}
+
+.navAndSearch .editNav li{
+    padding: 12px 20px;
+    border-bottom: 3px solid transparent;
+    color: var(--mainHeaderHover);
+}
+
+.navAndSearch .editNav li:hover{
+    border-bottom: 3px solid var(--edidHoverBlue);
+    color:black;
+}
+
+.navAndSearch .editNav .defaultSelect{
+    border-bottom: 3px solid var(--edidHoverBlue);
+    color:black;
+}
+
+.modal-container .modal-body .showPicInItems{
+    height: -webkit-fill-available;
+    overflow-y: scroll;
+}
+
+.modal-container .modal-body .slctBtn{
+    border-top: 1px solid var(--modalGray);
+    padding-top: 20px;
+    text-align: end;
+    padding-right: 20px;
+}
+
+.modal-container .modal-body .slctBtn button{
+    border: 1px solid var(--modalGray);
+    padding: 3px 18px;
+    border-radius: 8px;
+}
+
+.showModal{
+    display: block;
+}
+
+.extraPadding{
+    padding: 0 135px;
+}
+
+@media(max-width:1250px){
+    .uName .overlay1 .userInfo .nameAndInfo .numbers .joined p:last-child{
+        display: none;
+    }
+}
+
+@media(max-width:1150px){
+    .uName .overlay1 .userInfo .nameAndInfo .numbers .joined{
+        display: none;
+    }
+    .uName .overlay1 .userInfo .nameAndInfo .numbers .follwingFollowers{
+        width: 100%;
+    }
+}
+
+
+@media(max-width:812px){
+    .uName .overlay1 .userInfo{
+        height: 80%;
+        align-items: center;
+        transform: translate(-50%,-50%);
+    }
+
+    .uName .overlay1 .userInfo .nameAndInfo{
+        align-items: center;
+    }
+
+    .uName .overlay1 .userInfo .nameAndInfo .numbers {
+        justify-content: center;
+    }
+
+    .uName .overlay1 .userInfo .nameAndInfo .numbers ul{
+        padding: 0;
+        margin: auto;
+    }
+
+    .uName .overlay1 .userInfo{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .uName .overlay1 .userInfo .nameAndInfo .numbers .follwingFollowers p{
+        display: none;
+    }
+
+    .extraPadding{
+        padding: 0 20px;
+    }
+}
