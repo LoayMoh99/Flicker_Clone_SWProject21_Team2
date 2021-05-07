@@ -1,0 +1,56 @@
+version: "3.3"
+services:
+    nginx:
+        container_name: 'nginx'
+        depends_on:
+          # - front
+          - api
+        restart: always # because it is routing traffic to our entire app
+        build:
+          dockerfile: Dockerfile
+          context: ./nginx
+        ports:  
+          - '81:80'
+    # mongo:
+    #     image: mongo
+    #     container_name: 'mongo-db'
+    #     ports:
+    #         - '27017-27019:27017-27019'
+    #     volumes: 
+    #         - ./db/init-mongo.js:/docker-entrypoint-initdb.d/init-mongo.js:ro
+    #         - ./db/mongo-volume:/data/db
+        #env_file:
+        #    - ./api/.env
+    api:
+        build: 
+            context: ./api
+            dockerfile: Dockerfile
+        # ports:
+        #     - 8080:8080
+        restart: on-failure
+        container_name: api
+        # depends_on:
+        #     - mongo
+        #env_file:
+        #   - ./api/.env
+        volumes:
+          - /app/node_modules # Inside the container, don't try to override this folder, just leave as is    
+    front:
+        build: 
+            context: ./front
+            dockerfile: Dockerfile
+        # ports:
+        #     - 8081:8081
+        volumes:
+            - /app/node_modules # Inside the container, don't try to override this folder, just leave as is
+        restart: on-failure
+        container_name: front
+    #     depends_on: 
+    #         - front_db
+    # front_db:
+    #     build: 
+    #         context: ./front
+    #         dockerfile: Dockerfile.db
+    #     ports: 
+    #       - 3001:3001
+    #     container_name: front_db
