@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons'
 import axios from "axios"
 import { Link } from "react-router-dom/cjs/react-router-dom.min"
-const endpoint = 'http://localhost:3001/'
+const endpoint = 'http://localhost:3000/'
 
 function EditInfo(){
 

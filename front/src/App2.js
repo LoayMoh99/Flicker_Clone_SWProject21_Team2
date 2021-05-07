@@ -1,7 +1,7 @@
 import Userinfo from './components/HeaderBar/userInfo'
 import React,{useState,useEffect} from 'react';
 import axios from 'axios'
-const endpoint = 'http://localhost:3001/'
+const endpoint = 'http://localhost:3000/'
 //import React from 'react'
 
 function App2() {

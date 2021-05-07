@@ -3,7 +3,7 @@
   "JWT_KEY": "1234",
   "JWT_EXPIRES_IN": "30d",
   "db": "mongodb+srv://loay1234:loay1234@demo.o2olu.mongodb.net/dropoid?retryWrites=true&w=majority",
-  "PORT": "3000",
+  "PORT": "4000",
   "NODE_ENV": "development",
-  "dbtest": "mongodb://localhost:27017"
+  "dbtest": "mongodb+srv://loay1234:loay1234@demo.o2olu.mongodb.net/dropoid?retryWrites=true&w=majority"
 }

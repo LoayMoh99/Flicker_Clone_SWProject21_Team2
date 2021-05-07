@@ -1,7 +1,7 @@
 import React,{useState,useEffect} from "react"
 import axios from "axios"
 import ExploreGrid from "./Explore_grid"
-const endpoint = 'http://localhost:3001/'
+const endpoint = 'http://localhost:3000/'
 const filenames = [
   
 ];

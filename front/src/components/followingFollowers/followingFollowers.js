@@ -2,7 +2,7 @@ import React,{useState,useEffect} from 'react';
 import './followingFollowers.css';
 import defaultProfile from '../../img/deefault.jpg';
 import axios from "axios"
-const endpoint = 'http://localhost:3001/'
+const endpoint = 'http://localhost:3000/'
 
 export default function FollwingFollowers(props){
 

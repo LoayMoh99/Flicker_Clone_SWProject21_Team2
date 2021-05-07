@@ -30,7 +30,7 @@ import './EditModal.css';
 import './AddModal.css';
 // import { mockComponent } from 'react-dom/test-utils';
 import axios from "axios"
-const endpoint = 'http://localhost:3001/'
+const endpoint = 'http://localhost:3000/'
 
 function CamreRoll() {
   // const images = [{ photo_url: 'https://picsum.photos/id/237/200/300', createdAt: new Date('2019-05-28'), photo_id: '1' }, { photo_url: 'https://picsum.photos/200', createdAt: new Date('2019-06-10'), photo_id: '2' }, { photo_url: 'https://picsum.photos/seed/picsum/200/300', createdAt: new Date('2019-06-11'), photo_id: '3' }, { photo_url: 'https://picsum.photos/200/300?grayscale', createdAt: new Date('2019-06-10'), photo_id: '4' }, { photo_url: 'https://picsum.photos/seed/picsum/200/300', createdAt: new Date('2019-06-10'), photo_id: '5' }, { photo_url: 'https://picsum.photos/seed/picsum/200/300', createdAt: new Date('2019-06-10'), photo_id: '6' }];

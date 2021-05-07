@@ -1,5 +1,5 @@
 {
-  "name": "Dropoid",
+  "name": "dropoid",
   "version": "1.0.0",
   "description": "photo sharing application Node.js Express",
   "main": "src/index.js",

@@ -4,7 +4,7 @@ import NavBar from "./NavBar"
 import Slideshow from "./Slideshow"
 import './ImageGrid.css'
 import axios from "axios"
-const endpoint = 'http://localhost:3001/'
+const endpoint = 'http://localhost:3000/'
 
 function Photostream(){
 

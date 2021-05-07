@@ -15,7 +15,7 @@ import App2 from "./App2"
 import React,{useState,useEffect} from 'react';
 import axios from 'axios'
 import {BrowserRouter as Router, Switch , Route} from "react-router-dom";
-const endpoint = 'http://localhost:81/'
+const endpoint = 'http://localhost:3000/'
 
 function App() {
 

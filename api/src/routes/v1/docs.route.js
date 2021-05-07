@@ -9,7 +9,7 @@ const specs = swaggerJsdoc({
         info: {
             title: 'Dropoid API specification',
             version: '1.0.0',
-            host: 'localhost:81',
+            host: 'localhost:4000',
             basePath: '/api/v1',
         },
     },

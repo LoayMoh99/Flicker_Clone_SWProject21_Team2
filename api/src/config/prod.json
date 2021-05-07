@@ -2,15 +2,8 @@
 {
     "JWT_KEY": "DROPOIDSECRETKEY##",
     "JWT_EXPIRES_IN": "2h",
-<<<<<<< HEAD
-    "db": "mongodb://localhost:27017/dropoid",
-    "PORT": "3000",
+    "db":  "mongodb+srv://loay1234:loay1234@demo.o2olu.mongodb.net/dropoid_prod?retryWrites=true&w=majority",
+    "PORT": "4000",
     "NODE_ENV": "production",
-    "dbtest": "mongodb://localhost:27017"
+    "dbtest": "mongodb+srv://loay1234:loay1234@demo.o2olu.mongodb.net/dropoid_prod?retryWrites=true&w=majority"
   }
-=======
-    "db": "mongodb+srv://loay1234:loay1234@demo.o2olu.mongodb.net/dropoid_prod?retryWrites=true&w=majority",
-    "NODE_ENV": "production"
-  }
-  
->>>>>>> 4da1df6816c291f34fb4131073848739786ac18a

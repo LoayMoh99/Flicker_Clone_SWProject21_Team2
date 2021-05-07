@@ -19,11 +19,11 @@ app.options('*', cors())
 
 // simple route
 app.get("/test", (req, res) => {
-    res.json({ message: "Welcome to dropoids application." });
+    res.json({ message: "Welcome to dropoids backend application." });
   });
   
 // v1 api routes
-app.use('/api/v1',routes);
+app.use('/v1',routes);
 // app.listen(3000,(err)=>{
 //     console.log("start list");
     
