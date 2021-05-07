@@ -20,7 +20,7 @@
     "compression": "^1.7.4",
     "config": "^3.3.6",
     "cors": "^2.8.5",
-    "cross-env": "^7.0.0",
+    "cross-env": "^7.0.3",
     "dotenv": "^8.2.0",
     "email-existence": "^0.1.6",
     "express": "^4.17.1",
@@ -51,7 +51,7 @@
     "husky": "^5.1.2",
     "jest": "^26.0.1",
     "lint-staged": "^10.0.7",
-    "node-mocks-http": "^1.8.0",
+    "node-mocks-http": "^1.10.1",
     "nodemon": "^2.0.0",
     "prettier": "^2.0.5"
   }

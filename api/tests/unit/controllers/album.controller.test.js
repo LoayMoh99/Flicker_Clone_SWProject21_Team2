@@ -2,11 +2,13 @@ const httpmocks = require('node-mocks-http');
 const mongoose = require('mongoose');
 const albumController = require('../../../src/controllers/album.controller');
 const albumModel = require('../../../src/models/album.model');
-
+const config=require('config')
+//const db=config.get('db');
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 beforeAll(async () => {
-    const url = "mongodb://127.0.0.1:27017/jestalbum";
+    const db=config.get('dbtest');
+    const url = db+"/jestalbum";
     await mongoose.connect(url,
         {
             useNewUrlParser: true,
@@ -20,8 +22,7 @@ beforeAll(async () => {
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
 afterAll(async () => {
-    await mongoose.connection.db.dropDatabase();
-    await mongoose.connection.close();
+   
 
 })
 

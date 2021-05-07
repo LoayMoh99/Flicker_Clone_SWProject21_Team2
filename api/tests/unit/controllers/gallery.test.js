@@ -4,8 +4,12 @@ const gallerymodel=require('../../../src/controllers/gallery.controller');
 //const { describe } = require('joi/lib/types/lazy');
 //const { items } = require('joi/lib/types/array');
 const {validateGallery,Gallery,GallerySchema} = require('../../../src/models/gallery.model');
+const config=require('config')
+//const db=config.get('db');
+
 beforeAll(async()=>{
-    const url="mongodb://127.0.0.1:27017/jestuser";
+    const db=config.get('dbtest');
+    const url=db+"/jestuser";
 await mongoose.connect(url,
     {
         useNewUrlParser: true,
@@ -19,7 +23,7 @@ await mongoose.connect(url,
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
     afterAll(async()=>{
-await mongoose.connection.db.dropDatabase();
+
 await mongoose.connection.close();
 
     })

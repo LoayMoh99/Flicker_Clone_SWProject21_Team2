@@ -1,11 +1,14 @@
 const httpmocks=require('node-mocks-http');
 const mongoose=require('mongoose');
 const userModel=require('../../../src/controllers/user.controller');
+const config=require('config')
+
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 beforeAll(async()=>{
-    const url="mongodb://127.0.0.1:27017/jestuser";
+    const db=config.get('dbtest');
+    const url=db+"/jestuser";
 await mongoose.connect(url,
     {
         useNewUrlParser: true,
@@ -19,7 +22,7 @@ await mongoose.connect(url,
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
     afterAll(async()=>{
-await mongoose.connection.db.dropDatabase();
+
 await mongoose.connection.close();
 
     })

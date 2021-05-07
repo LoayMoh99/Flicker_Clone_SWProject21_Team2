@@ -4,5 +4,6 @@
     "JWT_EXPIRES_IN": "30d",
     "db": "mongodb://localhost:27017/dropoid-test",
     "PORT": "3000",
-    "NODE_ENV": "development"
+    "NODE_ENV": "development",
+    "dbtest": "mongodb://localhost:27017"
   }
