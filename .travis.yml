@@ -19,25 +19,25 @@ script:
 
 after_success:
   - echo Building the production Docker image..
-  - docker build -t loaymoh99/dkr-demo-front ./front
-  - docker build -t loaymoh99/dkr-demo-nginx ./nginx
-  - docker build -t loaymoh99/dkr-demo-api ./api
+  - docker build -t loaymoh99/dkr-dropoids-front ./front
+  - docker build -t loaymoh99/dkr-dropoids-nginx ./nginx
+  - docker build -t loaymoh99/dkr-dropoids-api ./api
   # Log in to the docker CLI:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   # Take those images and push them to docker hubgit push -u origin main:
   - echo Pushing the Docker images..
-  - docker push loaymoh99/dkr-demo-front
-  - docker push loaymoh99/dkr-demo-nginx
-  - docker push loaymoh99/dkr-demo-api
+  - docker push loaymoh99/dkr-dropoids-front
+  - docker push loaymoh99/dkr-dropoids-nginx
+  - docker push loaymoh99/dkr-dropoids-api
   
 deploy:
   edge: true
   provider: elasticbeanstalk
   region: us-east-2
-  app: Dropoids_demo
-  env: Dropoidsdemo-env
+  app: dropoidss_dropoids
+  env: dropoidssdropoids-env
   bucket_name: elasticbeanstalk-us-east-2-708087603038
-  bucket_path: Dropoids_demo
+  bucket_path: dropoidss_dropoids
   on:
     branch: main
   access_key_id: $AWS_ACCESS_KEY

@@ -3,7 +3,7 @@
     "containerDefinitions": [
       {
         "name": "nginx",
-        "image": "loaymoh99/dkr-demo-nginx",
+        "image": "loaymoh99/dkr-dropoids-nginx",
         "hostname": "nginx",
         "essential": true,
         "portMappings": [
@@ -17,14 +17,14 @@
       },
       {
         "name": "client",
-        "image": "loaymoh99/dkr-demo-front",
+        "image": "loaymoh99/dkr-dropoids-front",
         "hostname": "front",
         "essential": false,
         "memory": 200
       },
       {
         "name": "api",
-        "image": "loaymoh99/dkr-demo-api",
+        "image": "loaymoh99/dkr-dropoids-api",
         "hostname": "api",
         "essential": false,
         "memory": 200
