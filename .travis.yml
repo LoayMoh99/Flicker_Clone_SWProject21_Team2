@@ -29,6 +29,7 @@ after_success:
   - docker push loaymoh99/dkr-demo-front
   - docker push loaymoh99/dkr-demo-nginx
   - docker push loaymoh99/dkr-demo-api
+  
 deploy:
   edge: true
   provider: elasticbeanstalk
