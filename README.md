@@ -2,7 +2,7 @@
 A Flicker Clone (Backend [API] - Web &amp; Android Apps)
 
 For now to deploy the app locally at http:localhost:81
-
+{Of-course Docker must be installed}
 
 ```bash
   docker-compose down #to clear any running containers
