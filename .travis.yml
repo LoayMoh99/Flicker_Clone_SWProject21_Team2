@@ -31,11 +31,12 @@ after_success:
 - docker push loaymoh99/dkr-dropoids-front
 - docker push loaymoh99/dkr-dropoids-nginx
 - docker push loaymoh99/dkr-dropoids-api
+- pwd
 
 
-deploy:
-  provider: script
-  skip_cleanup: true
-  script: bash ./deploy.sh
-  on:
-    branch: main
+# deploy:
+#   provider: script
+#   skip_cleanup: true
+#   script: bash ./deploy.sh
+#   on:
+#     branch: main
