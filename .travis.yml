@@ -1,56 +1,33 @@
 sudo: required
 language: generic
-
 services:
-  - docker
-
+- docker
 branches:
   only:
   - main
-
 addons:
   ssh_known_hosts: 13.90.253.189
-
 before_install:
-  # Build Docker image for testing:
-  - echo Build front and api docker images for testing..
-  # - docker build -t loaymoh99/react-test -f ./front/Dockerfile.dev ./front
-  # - docker build -t loaymoh99/nodejs-test -f ./api/Dockerfile.dev ./api
-
+- openssl aes-256-cbc -K $encrypted_ea4d746d1f09_key -iv $encrypted_ea4d746d1f09_iv
+  -in deploy_key.enc -out ./deploy_key -d
+- echo Build front and api docker images for testing..
 script:
-  # Run tests with built Docker images:
-  - echo Run react tests..
-  #- docker run -e CI=true loaymoh99/react-test
-  - echo Run nodejs tests...
-  # - docker run -e CI=true loaymoh99/nodejs-test
-
+- echo Run react tests..
+- echo Run nodejs tests...
 after_success:
-  - echo Building the production Docker image..
-  - docker build -t loaymoh99/dkr-dropoids-front ./front
-  - docker build -t loaymoh99/dkr-dropoids-nginx ./nginx
-  - docker build -t loaymoh99/dkr-dropoids-api ./api
-  # Log in to the docker CLI: loaymoh99/dkr-dropoids-front:$(date +%s)
-  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
-  # Take those images and push them to docker hubgit push -u origin main:
-  - echo Pushing the Docker images..
-  - docker push loaymoh99/dkr-dropoids-front
-  - docker push loaymoh99/dkr-dropoids-nginx
-  - docker push loaymoh99/dkr-dropoids-api
-
-before_deploy:
-
-
+- echo Building the production Docker image..
+- docker build -t loaymoh99/dkr-dropoids-front ./front
+- docker build -t loaymoh99/dkr-dropoids-nginx ./nginx
+- docker build -t loaymoh99/dkr-dropoids-api ./api
+- echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+- echo Pushing the Docker images..
+- docker push loaymoh99/dkr-dropoids-front
+- docker push loaymoh99/dkr-dropoids-nginx
+- docker push loaymoh99/dkr-dropoids-api
+before_deploy: 
 deploy:
   provider: script
   skip_cleanup: true
-  script: bash ./.travis/deploy.sh
+  script: bash ./deploy.sh
   on:
     branch: main
-    #branch: devops # for testing locally only
-
-# notifications:  
-#   email:
-#     recipients:
-#       - loaymohamed1999@gmail.com
-#     on_success: never # default: change
-#     on_failure: always # default: always
