@@ -20,8 +20,8 @@ before_install:
 - ssh -i ./deploy_key Dev@13.90.253.189 pwd
 # Build Docker image for testing:
 - echo Build front and api docker images for testing..
-- docker build -t loaymoh99/react-test -f ./flickr_frontend/Dockerfile.dev ./flickr_frontend
-#- docker build -t loaymoh99/nodejs-test -f ./Team2_backend/Dockerfile.dev ./Team2_backend
+- docker build -t loaymoh99/react-test -f ./front/Dockerfile.dev ./front
+#- docker build -t loaymoh99/nodejs-test -f ./api/Dockerfile.dev ./api
 
 
 script:
