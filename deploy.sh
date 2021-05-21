@@ -1,7 +1,6 @@
 #!/bin/bash
 set -e
 
-ssh -i ./deploy_key Dev@13.90.253.189
 pwd
 cd Flicker_Clone_SWProject21_Team2/
 
