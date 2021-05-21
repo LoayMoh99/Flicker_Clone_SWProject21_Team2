@@ -1,6 +1,7 @@
 #!/bin/bash
 set -e
 
+git pull
 echo "Pulling new containers.."
 sudo docker-compose pull
 
