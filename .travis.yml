@@ -7,6 +7,8 @@ branches:
   - main
 addons:
   ssh_known_hosts: 13.90.253.189
+
+#ssh travis with our server
 before_install:
 - openssl aes-256-cbc -K $encrypted_ea4d746d1f09_key -iv $encrypted_ea4d746d1f09_iv
   -in deploy_key.enc -out ./deploy_key -d
@@ -16,12 +18,22 @@ before_install:
 - ssh-add ./deploy_key
 # test ssh connection
 - ssh -i ./deploy_key Dev@13.90.253.189 pwd
-
+# Build Docker image for testing:
 - echo Build front and api docker images for testing..
+- docker build -t loaymoh99/react-test -f ./flickr_frontend/Dockerfile.dev ./flickr_frontend
+#- docker build -t loaymoh99/nodejs-test -f ./Team2_backend/Dockerfile.dev ./Team2_backend
+
+
 script:
+# Run tests with built Docker images:
 - echo Run react tests..
+- docker run -e CI=true loaymoh99/react-test
 - echo Run nodejs tests...
+#- docker run -e CI=true loaymoh99/nodejs-test
+
+
 after_success:
+#Buildng and then pushing the new images to docker hub
 - echo Building the production Docker image..
 - docker build -t loaymoh99/dkr-dropoids-front ./front
 - docker build -t loaymoh99/dkr-dropoids-nginx ./nginx
@@ -31,12 +43,7 @@ after_success:
 - docker push loaymoh99/dkr-dropoids-front
 - docker push loaymoh99/dkr-dropoids-nginx
 - docker push loaymoh99/dkr-dropoids-api
-#- ssh -i ./deploy_key Dev@13.90.253.189 'cd Flicker_Clone_SWProject21_Team2/ && git clean  -d  -f . &&git reset --hard && git pull && sudo docker-compose pull && sudo docker-compose down && sudo docker-compose up -d'
+
+#deploying the new containers
 - ./deploy.sh
 
-# deploy:
-#   provider: script
-#   skip_cleanup: true
-#   script: bash ./deploy.sh
-#   on:
-#     branch: main
