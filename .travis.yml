@@ -38,9 +38,9 @@ after_success:
 after_success:
   # Make sure that all images are healthy:
   - echo Building the production Docker image..
-  - docker build -t loaymoh99/dkr-dropoids-front ./flickr_frontend
+  - docker build -t loaymoh99/dkr-dropoids-front ./front
   - docker build -t loaymoh99/dkr-dropoids-nginx ./nginx
-  - docker build -t loaymoh99/dkr-dropoids-api ./Team2_backend
+  - docker build -t loaymoh99/dkr-dropoids-api ./api
 
 
 deploy:
