@@ -24,7 +24,7 @@ Command line:
 
      There is absolutely no warranty on any results obtained from TRAVIS.
 
-  #  Running on Dropoids at Fri May 21 15:43:19 2021 (PID 18338).
+  #  Running on Dropoids at Fri May 21 15:35:43 2021 (PID 18268).
   #  Running in /home/Dev/Flicker_Clone_SWProject21_Team2
   #  Code version: Aug 12 2017, compiled at Jan 14 2018 01:39:14, compiler "7.2.0", GCC 7.2.0
   #  Target platform: Linux, compile flags: DEBUG_ARRAYS 
@@ -36,7 +36,6 @@ Command line:
 
     Loading configuration from /home/Dev/.travis.conf ...
 
-[Renaming existing File input.txt to #1#input.txt ...OK.]
 Unknown parameter: "encrypt-file".
 
     List of supported command line options:
