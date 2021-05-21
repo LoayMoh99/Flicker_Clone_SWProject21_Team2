@@ -10,6 +10,13 @@ addons:
 before_install:
 - openssl aes-256-cbc -K $encrypted_ea4d746d1f09_key -iv $encrypted_ea4d746d1f09_iv
   -in deploy_key.enc -out ./deploy_key -d
+- eval "$(ssh-agent -s)"
+- chmod 600 ./deploy_key
+- echo -e "Host $SERVER_IP_ADDRESS\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
+- ssh-add ./deploy_key
+# test ssh connection
+- ssh -i ./deploy_key Dev@13.90.253.189 pwd
+
 - echo Build front and api docker images for testing..
 script:
 - echo Run react tests..
@@ -24,7 +31,8 @@ after_success:
 - docker push loaymoh99/dkr-dropoids-front
 - docker push loaymoh99/dkr-dropoids-nginx
 - docker push loaymoh99/dkr-dropoids-api
-before_deploy: 
+
+
 deploy:
   provider: script
   skip_cleanup: true
