@@ -31,8 +31,8 @@ after_success:
 # - docker push loaymoh99/dkr-dropoids-front
 # - docker push loaymoh99/dkr-dropoids-nginx
 # - docker push loaymoh99/dkr-dropoids-api
-- ssh -i ./deploy_key Dev@13.90.253.189 'cd Flicker_Clone_SWProject21_Team2/ && git clean  -d  -f . &&git reset --hard && git pull && sudo docker-compose pull && sudo docker-compose down && sudo docker-compose up -d'
-
+# - ssh -i ./deploy_key Dev@13.90.253.189 'cd Flicker_Clone_SWProject21_Team2/ && git clean  -d  -f . &&git reset --hard && git pull && sudo docker-compose pull && sudo docker-compose down && sudo docker-compose up -d'
+  - ./deploy.sh
 
 # deploy:
 #   provider: script
