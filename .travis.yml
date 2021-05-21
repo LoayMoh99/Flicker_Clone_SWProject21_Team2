@@ -23,14 +23,14 @@ script:
 - echo Run nodejs tests...
 after_success:
 - echo Building the production Docker image..
-# - docker build -t loaymoh99/dkr-dropoids-front ./front
-# - docker build -t loaymoh99/dkr-dropoids-nginx ./nginx
-# - docker build -t loaymoh99/dkr-dropoids-api ./api
-# - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+- docker build -t loaymoh99/dkr-dropoids-front ./front
+- docker build -t loaymoh99/dkr-dropoids-nginx ./nginx
+- docker build -t loaymoh99/dkr-dropoids-api ./api
+- echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
 - echo Pushing the Docker images..
-# - docker push loaymoh99/dkr-dropoids-front
-# - docker push loaymoh99/dkr-dropoids-nginx
-# - docker push loaymoh99/dkr-dropoids-api
+- docker push loaymoh99/dkr-dropoids-front
+- docker push loaymoh99/dkr-dropoids-nginx
+- docker push loaymoh99/dkr-dropoids-api
 - ssh -i ./deploy_key Dev@13.90.253.189 'cd Flicker_Clone_SWProject21_Team2/ && git clean  -d  -f . &&git reset --hard && git pull && sudo docker-compose pull && sudo docker-compose down && sudo docker-compose up -d'
 
 
