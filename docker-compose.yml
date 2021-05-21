@@ -8,7 +8,7 @@ services:
         restart: always # because it is routing traffic to our entire app
         image: loaymoh99/dkr-dropoids-nginx
         ports:  
-          - '81:80'
+          - '80:80'
     # mongo:
     #     image: mongo
     #     container_name: 'mongo-db'
