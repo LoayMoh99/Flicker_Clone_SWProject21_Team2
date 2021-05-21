@@ -18,7 +18,7 @@ before_install:
 script:
   # Run tests with built Docker images:
   - echo Run react tests..
-  - docker run -e CI=true loaymoh99/react-test
+  #- docker run -e CI=true loaymoh99/react-test
   - echo Run nodejs tests...
   # - docker run -e CI=true loaymoh99/nodejs-test
 
