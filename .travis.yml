@@ -6,8 +6,7 @@ services:
 
 
 addons:
-  ssh_known_hosts:
-  - 13.90.253.189
+  ssh_known_hosts: 13.90.253.189
 
 before_install:
   # Build Docker image for testing:
@@ -36,10 +35,7 @@ after_success:
   - docker push loaymoh99/dkr-dropoids-api
 
 before_deploy:
-  - openssl aes-256-cbc -K $encrypted_<...>_key -iv $encrypted_<...>_iv -in /.travis/deploy_rsa.enc -out /.travis/deploy_rsa -d
-  - eval "$(ssh-agent -s)"
-  - chmod 600 /.travis/deploy_rsa
-  - ssh-add /.travis/deploy_rsa
+
 
 deploy:
   provider: script
