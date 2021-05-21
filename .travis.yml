@@ -49,6 +49,7 @@ deploy:
   script: bash ./deploy.sh
   on:
     branch: main
+    branch: devops # for testing locally only
 
 # notifications:  
 #   email:
