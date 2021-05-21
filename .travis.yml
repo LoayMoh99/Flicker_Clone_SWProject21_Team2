@@ -12,8 +12,8 @@ before_install:
   # - ssh-add ~/.ssh/deploy_rsa
   # Build Docker image for testing:
   - echo Build front and api docker images for testing..
-  - docker build -t loaymoh99/react-test -f ./front/Dockerfile.dev ./front
-  - docker build -t loaymoh99/nodejs-test -f ./api/Dockerfile.dev ./api
+  # - docker build -t loaymoh99/react-test -f ./front/Dockerfile.dev ./front
+  # - docker build -t loaymoh99/nodejs-test -f ./api/Dockerfile.dev ./api
 
 script:
   # Run tests with built Docker images:
@@ -35,18 +35,11 @@ after_success:
   - docker push loaymoh99/dkr-dropoids-nginx
   - docker push loaymoh99/dkr-dropoids-api
 
-after_success:
-  # Make sure that all images are healthy:
-  - echo Building the production Docker image..
-  - docker build -t loaymoh99/dkr-dropoids-front ./front
-  - docker build -t loaymoh99/dkr-dropoids-nginx ./nginx
-  - docker build -t loaymoh99/dkr-dropoids-api ./api
-
 
 deploy:
   provider: script
   skip_cleanup: true
-  script: bash ./deploy.sh
+  script: bash ./.travis/deploy.sh
   on:
     branch: main
     branch: devops # for testing locally only
