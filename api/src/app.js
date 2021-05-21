@@ -19,7 +19,7 @@ app.options('*', cors())
 
 // simple route
 app.get("/test", (req, res) => {
-    res.json({ message: "Welcome to dropoids backend application V3." });
+    res.json({ message: "Welcome to dropoids backend application V1." });
   });
   
 // v1 api routes
