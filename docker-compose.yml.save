@@ -9,15 +9,6 @@ services:
         image: loaymoh99/dkr-dropoids-nginx
         ports:  
           - '80:80'
-          - '443:443'
-
-    certbot:
-        image: certbot/certbot:latest
-        command: certonly --webroot --webroot-path=/var/www/certbot --email loay@dropoids.me --agree-tos --no-eff-email -d dropoids.me -d www.dropoids.me
-        volumes:
-            - ./certbot/conf:/etc/letsencrypt
-            - ./certbot/logs:/var/log/letsencrypt
-            - ./certbot/data:/var/www/certbot
     # mongo:
     #     image: mongo
     #     container_name: 'mongo-db'
