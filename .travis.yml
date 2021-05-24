@@ -6,7 +6,7 @@ branches:
   only:
   - main
 addons:
-  ssh_known_hosts: 13.90.253.189
+  ssh_known_hosts: 52.170.119.1
 
 #ssh travis with our server
 before_install:
@@ -17,7 +17,7 @@ before_install:
 - echo -e "Host $SERVER_IP_ADDRESS\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 - ssh-add ./deploy_key
 # test ssh connection
-- ssh -i ./deploy_key Dev@13.90.253.189 pwd
+- ssh -i ./deploy_key Dev@52.170.119.1 pwd
 # Build Docker image for testing:
 - echo Build front and api docker images for testing..
 - docker build -t loaymoh99/react-test -f ./front/Dockerfile.dev ./front
