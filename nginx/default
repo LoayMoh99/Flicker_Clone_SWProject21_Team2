@@ -54,7 +54,7 @@ server {
 	#
 	# include snippets/snakeoil.conf;
 
-  server_name _;
+	server_name _;
 
   access_log /var/log/nginx/access.log upstreamlog;
 
