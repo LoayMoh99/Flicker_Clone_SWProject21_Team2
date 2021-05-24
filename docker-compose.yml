@@ -7,20 +7,20 @@ services:
           - api
         restart: always # because it is routing traffic to our entire app
         image: loaymoh99/dkr-dropoids-nginx
-        volumes:
-            - ./certbot/conf:/etc/nginx/ssl
-            - ./certbot/data:/var/www/certbot
+        # volumes:
+        #     - ./certbot/conf:/etc/nginx/ssl
+        #     - ./certbot/data:/var/www/certbot
         ports:  
           - '80:80'
           - '443:443'
 
-    certbot:
-        image: certbot/certbot:latest
-        command: certonly --webroot --webroot-path=/var/www/certbot --email loay@dropoids.me --agree-tos --no-eff-email -d dropoids.me -d www.dropoids.me
-        volumes:
-            - ./certbot/conf:/etc/letsencrypt
-            - ./certbot/logs:/var/log/letsencrypt
-            - ./certbot/data:/var/www/certbot
+    # certbot:
+    #     image: certbot/certbot:latest
+    #     command: certonly --webroot --webroot-path=/var/www/certbot --email loay@dropoids.me --agree-tos --no-eff-email -d dropoids.me -d www.dropoids.me
+    #     volumes:
+    #         - ./certbot/conf:/etc/letsencrypt
+    #         - ./certbot/logs:/var/log/letsencrypt
+    #         - ./certbot/data:/var/www/certbot
     # mongo:
     #     image: mongo
     #     container_name: 'mongo-db'
